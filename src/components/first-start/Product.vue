@@ -1,9 +1,16 @@
 <template>
-  <div class="product">
+  <div class="card product">
+    <p class="text-primary"></p>
     <img :src="image" :alt="name" class="product-image" />
     <h3 class="product-name">{{ name }}</h3>
-    <p class="product-price">{{ formatPrice(price) }}</p>
-    <button @click="addToCart" class="add-to-cart-button">Add to Cart</button>
+    <p class="product-price">{{ price ? formatPrice(price) : "solid out" }}</p>
+    <button
+      @click="addToCart"
+      :class="{ active: isActive }"
+      class="btn btn-sm btn-success text-white text-hover-red"
+    >
+      Add to Cart
+    </button>
   </div>
 </template>
 
@@ -14,29 +21,32 @@ export default {
     id: Number,
     name: String,
     image: String,
-    price: Number,
+    price: String,
+    detail: Object,
   },
   data() {
     return {
       log: "",
+      isActive: false,
     };
   },
-  mounted() {
-    this.onLog();
-    console.log('Component Mouted');
-  },
+  mounted() {},
   methods: {
+    triggerActive() {
+      this.isActive = !this.isActive;
+    },
     onLog() {
       console.log("On Log");
     },
 
     addToCart() {
+      this.isActive = !this.isActive;
       this.$emit("add-to-cart", this.id);
       this.onLog();
     },
 
     formatPrice(price) {
-      return `$${price.toFixed(2)}`;
+      return "$" + price;
     },
   },
 };
@@ -52,6 +62,8 @@ export default {
 
 .product-image {
   max-width: 500px;
+  max-height: 500px;
+  background: contain;
   height: auto;
 }
 
