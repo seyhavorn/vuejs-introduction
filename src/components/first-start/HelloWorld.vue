@@ -7,6 +7,7 @@
     <div class="product-item-container">
       <div v-for="(product, index) in products" :key="product.id">
         <ProducItem
+          :category="category"
           :id="product.id"
           :index="index + 1"
           :name="product.name"
@@ -22,7 +23,7 @@
 
 <script>
 import ProducItem from "./Product.vue";
-import ConditionalRender from "./conditional-rendering.vue";
+import ConditionalRender from "./ConditionalRendering.vue";
 
 export default {
   name: "HelloWorld",
@@ -30,6 +31,7 @@ export default {
   props: {},
   data() {
     return {
+      category: "hoodies",
       products: [
         {
           id: 1,
@@ -61,9 +63,7 @@ export default {
     this.onLog();
   },
   methods: {
-    onLog() {
-      console.log("Mounted");
-    },
+    onLog() {},
     addToCart(productId) {
       this.cart.push(productId);
     },

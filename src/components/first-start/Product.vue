@@ -4,6 +4,7 @@
     <img :src="image" :alt="name" class="product-image" />
     <h3 class="product-name">{{ name }}</h3>
     <p class="product-price">{{ price ? formatPrice(price) : "solid out" }}</p>
+    <p class="text-primary">{{ category }}</p>
     <button
       @click="addToCart"
       :class="{ active: isActive }"
@@ -22,7 +23,7 @@ export default {
     name: String,
     image: String,
     price: String,
-    detail: Object,
+    category: String,
   },
   data() {
     return {
