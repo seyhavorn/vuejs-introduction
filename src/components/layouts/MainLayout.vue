@@ -1,14 +1,13 @@
 <template>
-  <div class="">
-    <header>
+  <header class="conatiner-fluid" style="background-color: #50bbbb">
+    <div class="container mx-auto">
       <slot name="header"></slot>
-    </header>
-  </div>
-  <main>
+    </div>
+  </header>
+  <main class="container content-main">
     <slot name="content"></slot>
   </main>
   <footer>
-    <!-- footer content -->
     <slot name="footer"></slot>
   </footer>
 </template>
@@ -24,4 +23,8 @@ export default {
 </script>
 
 <style>
+.content-main {
+  margin-top: 50px;
+  padding-right: 50px;
+}
 </style>

@@ -37,7 +37,7 @@ export default {
       this.isActive = !this.isActive;
     },
     onLog() {
-      console.log("On Log");
+      // 
     },
 
     addToCart() {

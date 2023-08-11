@@ -6,7 +6,7 @@
       Laboriosam dicta esse illo deserunt dolor inventore tenetur. Impedit,
       suscipit assumenda!
     </p>
-    <button class="btn btn-sm btn-primary" :on-click="greet()">Check</button>
+    <button class="btn btn-sm btn-primary">Check</button>
   </div>
 </template>
 
@@ -20,12 +20,6 @@ export default {
   },
   props: {},
   methods: {
-    greet(event) {
-      alert(`Hello ${this.name}`);
-      if (event) {
-        alert(event.target.tagname);
-      }
-    },
   },
 };
 </script>

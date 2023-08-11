@@ -25,9 +25,6 @@ export default {
   },
   methods: {
     login() {
-      // console.log("email", this.email);
-      // console.log("password", this.password);
-      // conssole.log("Selecting", this.selected);
     },
   },
 };
