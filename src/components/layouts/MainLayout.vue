@@ -10,36 +10,48 @@
         </div>
         <ul class="sidebar-nav">
             <router-link class="nav-link cursor-pointer" to="/" exact
-              active-class="asidebar-lsit-active">
+              active-class="sidebar-list-active">
               <li class="">
                     Home
               </li>
             </router-link>
 
             <router-link class="nav-link cursor-pointer" to="/about" exact
-                         active-class="asidebar-lsit-active">
+                         active-class="sidebar-list-active">
                 <li class="">
                     About
                 </li>
             </router-link>
 
             <router-link class="nav-link cursor-pointer" to="/product" exact
-                         active-class="asidebar-lsit-active">
+                         active-class="sidebar-list-active">
                 <li class="">
                     About
                 </li>
             </router-link>
 
             <router-link class="nav-link cursor-pointer" to="/lesson" exact
-                         active-class="asidebar-lsit-active">
+                         active-class="sidebar-list-active">
                 <li class="">
                     About
                 </li>
             </router-link>
 
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+            <router-link to="/test3" class="nav-link cursor-pointer" exact active-class="sidebar-list-active">
+                <li class="">
+                  Support
+                </li>
+            </router-link>
+
+            <router-link to="/test4" class="nav-link cursor-pointer" exact active-class="sidebar-list-active">
+                <li class="">
+                    Test4
+                </li>
+            </router-link>
+
+<!--          <li><a href="#">Services</a></li>-->
+<!--          <li><a href="#">Portfolio</a></li>-->
+<!--          <li><a href="#">Contact</a></li>-->
         </ul>
       </nav>
       <div class="content p-4">
@@ -99,7 +111,7 @@ export default {
   transition: all 0.4s;
 }
 
-.asidebar-lsit-active {
+.sidebar-list-active {
   color: white;
   background-color: #4fbbbb;
 }

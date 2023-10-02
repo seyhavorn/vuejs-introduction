@@ -3,8 +3,9 @@
     <h3>Product Detail</h3>
     <div class="row">
       <div class="col-md-5">
+<!--          src="./assets/images/products/pro1.jpg"-->
         <img
-          src="/assets/images/products/pro1.jpg"
+                src="./../../../assets/images/products/pro1.jpg"
           class="card-img-top image-props"
           alt="Product Title"
         />
