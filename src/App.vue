@@ -2,7 +2,7 @@
   <div id="app">
     <MainLayout>
       <template #header>
-        <nav class="navbar navbar-expand-lg">
+        <!-- <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <a class="navbar-brand" href="/">
               <router-link to="/"></router-link>
@@ -70,7 +70,7 @@
               </form>
             </div>
           </div>
-        </nav>
+        </nav> -->
       </template>
       <template #content>
         <router-view />
@@ -82,14 +82,14 @@
 <script>
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-import { RouterLink } from "vue-router";
+// import { RouterLink } from "vue-router";
 import MainLayout from "./components/layouts/MainLayout.vue";
 
 export default {
   name: "App",
   components: {
     MainLayout,
-    RouterLink,
+    // RouterLink,
   },
   data() {
     return { currentPath: window.location.hash };

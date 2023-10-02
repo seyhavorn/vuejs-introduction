@@ -1,12 +1,54 @@
 <template>
   <header class="conatiner-fluid" style="background-color: #50bbbb">
-    <div class="container mx-auto">
-      <slot name="header"></slot>
+     <slot name="header"></slot>
+    <div class="d-flex">
+      <nav class="sidebar sidebar-menu" style="width: 200px;">
+        <div class="sidebar-heading">
+            <router-link class="nav-link cursor-pointer text-uppercase" to="/">
+                SEYHA SHOP
+            </router-link>
+        </div>
+        <ul class="sidebar-nav">
+            <router-link class="nav-link cursor-pointer" to="/" exact
+              active-class="asidebar-lsit-active">
+              <li class="">
+                    Home
+              </li>
+            </router-link>
+
+            <router-link class="nav-link cursor-pointer" to="/about" exact
+                         active-class="asidebar-lsit-active">
+                <li class="">
+                    About
+                </li>
+            </router-link>
+
+            <router-link class="nav-link cursor-pointer" to="/product" exact
+                         active-class="asidebar-lsit-active">
+                <li class="">
+                    About
+                </li>
+            </router-link>
+
+            <router-link class="nav-link cursor-pointer" to="/lesson" exact
+                         active-class="asidebar-lsit-active">
+                <li class="">
+                    About
+                </li>
+            </router-link>
+
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="content p-4">
+        <main class="container content-main">
+          <slot name="content"></slot>
+        </main>
+      </div>
     </div>
   </header>
-  <main class="container content-main">
-    <slot name="content"></slot>
-  </main>
   <footer>
     <slot name="footer"></slot>
   </footer>
@@ -24,7 +66,55 @@ export default {
 
 <style>
 .content-main {
-  margin-top: 50px;
-  padding-right: 50px;
+  padding-left: 200px;
+}
+
+.sidebar-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.sidebar {
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+}
+
+.sidebar-heading {
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.asidebar-lsit-active {
+  color: white;
+  background-color: #4fbbbb;
+}
+
+.sidebar-nav li:hover {
+  color: white;
+  background-color: #4fbbbb;
+}
+
+.sidebar-nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  color: #f8f9fa;
 }
 </style>
