@@ -48,10 +48,6 @@
                     Test4
                 </li>
             </router-link>
-
-<!--          <li><a href="#">Services</a></li>-->
-<!--          <li><a href="#">Portfolio</a></li>-->
-<!--          <li><a href="#">Contact</a></li>-->
         </ul>
       </nav>
       <div class="content p-4">
