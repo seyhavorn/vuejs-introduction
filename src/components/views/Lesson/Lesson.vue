@@ -14,10 +14,17 @@
     <div class="mb-5">
       <OptionVsCompositionAPI />
     </div>
+    <div class="mb-5">
+      <ComposableAPI />
+    </div>
+    <div class="mb-5">
+      <ComposableAPIS/>
+    </div>
   </div>
 </template>
 
 <script>
+import ComposableAPIS from "./ComposableAPIS.vue";
 import CompositionApi from "./CompositionApi.vue";
 import EventPath from "./EventPath.vue";
 import OptionVsCompositionAPI from "./OptionVsCompositionAPI.vue";
@@ -29,8 +36,9 @@ export default {
     EventPath,
     TwoWayBinding,
     CompositionApi,
-    OptionVsCompositionAPI
-  },
+    OptionVsCompositionAPI,
+    ComposableAPIS
+},
   methods: {},
 };
 </script>
