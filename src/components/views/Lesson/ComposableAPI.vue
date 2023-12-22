@@ -5,7 +5,6 @@ import { ref, onMounted } from 'vue';
 const username = ref("Seyha");
 function updateUserName(newUserName) {
   username.value = newUserName;
-  console.log(username.value);
 }
 
 

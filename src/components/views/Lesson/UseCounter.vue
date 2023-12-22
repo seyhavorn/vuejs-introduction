@@ -26,7 +26,10 @@ export function useCounter(initialValue) {
 
 <template>
   <div>
-
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, vero soluta? Laboriosam ea sed nisi fuga autem sit
+      odit atque ad, omnis ut hic saepe quisquam quibusdam dolorum cum iste.
+    </p>
   </div>
 </template>
 

@@ -3,42 +3,34 @@
     <h3>Lesson Page:</h3>
     <div class="mb-5">
       <EventPath />
-    </div>
-    <div class="mb-5">
       <TwoWayBinding />
-    </div>
-
-    <div class="mb-5">
-      <CompositionApi />
-    </div>
-    <div class="mb-5">
       <OptionVsCompositionAPI />
-    </div>
-    <div class="mb-5">
       <ComposableAPI />
+      <SampleList />
     </div>
-    <div class="mb-5">
-      <ComposableAPIS/>
-    </div>
+    <AsyncComponetVue />
+
   </div>
 </template>
 
 <script>
-import ComposableAPIS from "./ComposableAPIS.vue";
-import CompositionApi from "./CompositionApi.vue";
+import ComposableAPI from "./ComposableAPI.vue";
 import EventPath from "./EventPath.vue";
 import OptionVsCompositionAPI from "./OptionVsCompositionAPI.vue";
 import TwoWayBinding from "./ToWayBinding.vue";
+import SampleList from "../SampleList/SampleList.vue";
+import AsyncComponetVue from '../asyncComponents/AsyncComponet.vue';
 
 export default {
   name: "LessonPage",
   components: {
     EventPath,
     TwoWayBinding,
-    CompositionApi,
+    AsyncComponetVue,
     OptionVsCompositionAPI,
-    ComposableAPIS
-},
+    ComposableAPI,
+    SampleList
+  },
   methods: {},
 };
 </script>

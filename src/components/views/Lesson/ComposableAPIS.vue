@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 import { useCounter } from './UseCounter.vue';
 
 export default {
@@ -19,4 +19,4 @@ export default {
     <button @click="counter.decrement">Decrement</button>
     <p>Doubled Count: {{ counter.doubledCount }}</p>
   </div>
-</template>
+</template> -->
