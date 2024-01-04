@@ -18,11 +18,19 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button v-on:click="add(10)">Add 10</button>
+      <button @click="add(10)">Add 10</button>
       <button v-on:click="reduce(5)">Subtract 5</button>
       <p>Result: {{ counter }}</p>
+      <!-- Noted: 
+        We can using v-bind="" replace with :value=""
+       -->
       <!-- <input type="text" v-bind:value="name" v-on:input="setName($event, 'Schwarzmüller')"> -->
-      <input type="text" v-model="name">
+      <!-- <input type="text" :value="name" v-on:input="setName($event, 'Schwarzmüller')"> -->
+      <!-- <input type="text" v-model="name" placeholder="Name" /> <br /> -->
+      <input type="text"  v-model="name" placeholder="Name" /> <br />
+      <br />
+      <input type="text" v-model="lastName" placeholder="Last Name" /> <br />
+      <br />
       <button v-on:click="resetInput()">Reset Input</button>
       <p>Your Name: {{ fullName }}</p>
     </section>

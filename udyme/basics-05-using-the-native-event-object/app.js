@@ -3,16 +3,43 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: '',
+      lastName: '',
+      // fullName: '',
     };
+  },
+  watch: {
+    counter(value) {
+      if (value > 50) {
+        const that = this;
+        setTimeout(() => {
+          console.log('this counter', this.counter);
+          that.counter = 0;
+        }, 1000);
+      }
+    },
+    // name(value) {
+    //   if (value === '') {
+    //     this.fullName = '';
+    //   } else {
+    //     this.fullName = value + ' ' + 'Seyha';
+    //   }
+    // },
+    // lastName(value) {
+    //   if (value === '') {
+    //     this.fullName = '';
+    //   } else {
+    //     this.fullName + ' ' + this.name + ' ' + value;
+    //   }
+    // },
   },
   // Commputed is using for action that chnage on view:
   computed: {
     fullName() {
-      console.log("Running again....!");
-      if (this.name == '') {
+      console.log('Running again....!');
+      if (this.name == '' || this.lastName === '') {
         return '';
       }
-      return this.name + ' ' + 'Developer';
+      return this.name + ' ' + this.lastName;
     },
   },
   methods: {
