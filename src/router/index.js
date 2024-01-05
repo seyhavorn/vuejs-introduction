@@ -35,6 +35,11 @@ const routes = [
     props: true,
   },
   {
+    path:'/udemy',
+    name: 'udemy',
+    component:
+  }
+  {
     path: '/',
     redirect: '/',
   },
